@@ -37,12 +37,14 @@ aside {
     text-align: center;
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     padding: 30px;
+    transition: .5s;
 }
 
 section {
     width: calc(100% - 220px);
     padding: 30px;
     margin-left: 280px;
+    transition: .5s;
 }
 
 .shine {
@@ -188,21 +190,103 @@ section {
     width: 90%;
     border: 1px solid transparent;
     margin-bottom: 5px;
-    padding: 5px 10px;
     transition: .5s;
     cursor: pointer;
 }
 .user-skills ul li a {
     color: #000;
+    display: block;
     text-decoration: none;
+    padding: 5px 10px;
 }
 .user-skills ul li:hover{
     border: 1px solid green;
 }
 .main-box {
     background-color: #fff;
-    min-height: 100vh;
+    min-height: 70vh;
     border-radius: 5px;
     padding: 30px;
     margin-bottom: 40px;
+    border: 8px solid transparent;
+    border-image-slice: 1;
+    border-width: 4px;
+    border-image-source: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+.skills-list {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+}
+.skills-list li {
+    width: 25%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.skills-list li img {
+    display: inline-block;
+    max-width: 120px;
+    margin: auto;
+}
+.arrow-icon-block {
+    display: none;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.arrow-icon-block .arrow {
+    color: rgb(87, 201, 87);
+    transition: .5s;
+}
+.project-links {
+    list-style: square;
+}
+.project-links li a {
+    color: blue;
+    display: inline-block;
+    padding: 5px 0;
+    text-decoration: none;
+}
+@media (min-width: 992px) {
+    aside {
+        left: 0;
+        transition: .5s;
+    }
+    section {
+        width: calc(100% - 280px);
+        margin-left: 280px;
+    }
+}
+@media (max-width: 991px) {
+    .arrow-icon-block {
+        display: flex;
+    }
+    aside {
+        left: -280px;
+        transition: .5s;
+    }
+    section {
+        width: 100%;
+        margin-left: 0;
+    }
+    .skills-list li {
+        width: 33.33%;
+    }
+}
+@media (max-width: 767px){
+    .skills-list li {
+        width: 50%;
+    }
+}
+@media (max-width: 580px) {
+    .skills-list li {
+        width: 100%;
+    }
 }
