@@ -1,6 +1,12 @@
 body {
+    font-family: "lato";
+    color: rgb(68, 68, 87);
     margin: 0;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+h3 {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
 }
 header {
     font-size: 22px;
@@ -173,14 +179,14 @@ section {
     color: #000;
     background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
     font-size: 15px;
-    border-radius: 6px;
-    font-weight: bold;
+    font-weight: 500;
     list-style: none;
     width: 85%;
     border: 1px solid transparent;
     margin-bottom: 5px;
     padding: 5px 10px;
     transition: .5s;
+    cursor: pointer;
 }
 .user-skills ul li:hover{
     border: 1px solid green;
