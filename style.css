@@ -29,7 +29,10 @@ main {
 }
 
 aside {
-    width: 216px;
+    position: fixed;
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
     height: 100%;
     text-align: center;
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
@@ -37,8 +40,9 @@ aside {
 }
 
 section {
-    width: calc(100% - 300px);
+    width: calc(100% - 220px);
     padding: 30px;
+    margin-left: 280px;
 }
 
 .shine {
@@ -181,13 +185,24 @@ section {
     font-size: 15px;
     font-weight: 500;
     list-style: none;
-    width: 85%;
+    width: 90%;
     border: 1px solid transparent;
     margin-bottom: 5px;
     padding: 5px 10px;
     transition: .5s;
     cursor: pointer;
 }
+.user-skills ul li a {
+    color: #000;
+    text-decoration: none;
+}
 .user-skills ul li:hover{
     border: 1px solid green;
+}
+.main-box {
+    background-color: #fff;
+    min-height: 100vh;
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 40px;
 }
